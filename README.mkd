@@ -9,8 +9,17 @@
 利用方法
 -------
 
+利用にはjqueryが必要です。
+
 ```
+<script type="text/javascript src="jquery.min.js">
+<script type="text/javascript src="device.js">
+</script>
+...
+<script type="text/javascript>
+...
 devinfo = getDeviceInfo();
+...
 ```
 
 で端末情報を取得します。戻り値はハッシュで返ってきます。フォーマットは、下記の通りです。
