@@ -1,0 +1,44 @@
+スマートフォン用端末情報取得ライブラリ
+======================================
+
+スマートフォンのWebブラウザアプリケーション開発において、スマートフォン毎に挙動が異なるため処理を分けたい場合があります。
+
+スマートフォン毎のOSやバージョンは、User-Agentを解析すれば取得できますが、User-Agentをパースして判別するのは若干面倒です。
+このライブラリを利用すれば、OS毎の端末情報を取得してくれます。
+
+利用方法
+-------
+
+利用にはjqueryが必要です。
+
+```
+<script type="text/javascript src="jquery.min.js">
+<script type="text/javascript src="device.js">
+</script>
+...
+<script type="text/javascript>
+...
+devinfo = getDeviceInfo();
+...
+```
+
+で端末情報を取得します。戻り値はハッシュで返ってきます。フォーマットは、下記の通りです。
+
+```
+{
+  os:      <OSの種類>,
+  version: <OSのバージョン>,
+  model:   <端末のモデル情報>,
+  lang:    <OS(ブラウザ)の言語(option)>,
+  revision:<端末のファームのリビジョン等(option)>
+}
+```
+
+OSは、iOS/Android/Windows Phone OS、modelは、iPhone/iPad/SH-12Cなど、langはja_JP,en_usなどの値が返ってきます。
+
+ライセンス
+----------
+
+FreeBSDライセンスで利用可能です。
+
+
