@@ -47,7 +47,7 @@ function getDeviceInfo(){
     t=$.trim(devinfo[4]).split(' ');
     r.model=$.trim(t[0]);
     r.revision=$.trim(t[1]);
-  } else if (devinfo[0]=='iPhone' || devinfo[0]=='iPad'){
+  } else if (devinfo[0]=='iPhone' || devinfo[0]=='iPad' || devinfo[0]=='iPod'){
     osstr = (devinfo[1]==' U')?devinfo[2]:devinfo[1];
     r.lang = (devinfo[1]==' U')?devinfo[3]:null;
     t = $.trim(osstr).split(' ');
